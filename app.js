@@ -14,13 +14,17 @@ function printMessage(username, badgeCount, points) {
 
 
 var request= https.get("https://teamtreehouse.com/"+username+".json",function(response) {
-    console.log(response.statusCode);
+ var body = "";
 
 
 //Read the data
 
     response.on('data', function (chunk) {
-        console.log('BODY: ' + chunk);
+        body += chunk;
+    });
+
+    response.on('end', function() {
+        console.log(body);
     });
 });
 
