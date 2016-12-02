@@ -25,7 +25,8 @@ var request= https.get("https://teamtreehouse.com/"+username+".json",function(re
 
     response.on('end', function() {
         var profile = JSON.parse(body);
-        console.dir(profile);
+        printMessage(username, profile.badges.length, profile.points.JavaScript);
+
     });
 });
 
