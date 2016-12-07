@@ -13,10 +13,9 @@ function printMessage(username, badgeCount, points) {
 
 //Print out error messages
 function printError(error){
-    request.on('error', function(error) {
-        console.error(error.message);
-    });
+    console.error(error.message);
 }
+
 
 //Connect to the API URL (https://teamtreehouse.com/username.json)
 var request = https.get('https://teamtreehouse.com/' + username + '.json', function(response) {
