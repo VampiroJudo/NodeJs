@@ -49,3 +49,5 @@ function get(username) {
 
     request.on('error', printError);
 }
+
+module.exports.get = get;
