@@ -15,34 +15,37 @@ function printError(error){
     console.error(error.message);
 }
 
-
+function get(username) {
 //Connect to the API URL (https://teamtreehouse.com/username.json)
-var request = https.get('https://teamtreehouse.com/' + username + '.json', function(response) {
-    var body = '';
+    var request = https.get('https://teamtreehouse.com/' + username + '.json', function (response) {
+        var body = '';
 
-    //Read the data
-    response.on('data', function(chunk) {
-        body += chunk;
+        //Read the data
+        response.on('data', function (chunk) {
+            body += chunk;
 
-    });
-    response.on('end', function() {
-        if(response.statusCode === 200) {
-            try {
-                var profile = JSON.parse(body);
-                printMessage(username, profile.badges.length, profile.points.JavaScript)
-            } catch(error){
-                //Parse Error
-                printError(error.message);
+        });
+        response.on('end', function () {
+            if (response.statusCode === 200) {
+                try {
+                    //Parse the data
+                    var profile = JSON.parse(body);
+                    //Print the data
+                    printMessage(username, profile.badges.length, profile.points.JavaScript)
+                } catch (error) {
+                    //Parse Error
+                    printError(error.message);
+                }
+            } else {
+                //Status Code Error
+                printError({message: "There was an error getting the profile for " + username + '. (' + response.statusCode + ')'});
             }
-        } else {
-            //Status Code Error
-            printError({message: "There was an error getting the profile for " + username + '. (' + response.statusCode + ')'});
-        }
+        });
+
+
+
+
     });
 
-    //Parse the data
-    //Print the data
-
-});
-
-request.on('error', printError);
+    request.on('error', printError);
+}
