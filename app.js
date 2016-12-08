@@ -1,3 +1,4 @@
 var profile = require("./profile");
+var users = ["johnconley", "chalkers"];
 
-profile.get("johnconley");
+users.forEach(profile.get);
