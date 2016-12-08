@@ -1,3 +1,3 @@
-var profile = require("./profile.js");
+var profile = require("./profile");
 
 profile.get("johnconley");
