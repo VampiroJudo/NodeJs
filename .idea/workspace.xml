@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="629d1262-bc8d-4402-b666-205fe35a32ff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NodeJs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -243,12 +243,12 @@
       <workItem from="1481145507112" duration="600000" />
       <workItem from="1481214480324" duration="592000" />
       <workItem from="1481215104861" duration="1099000" />
-      <workItem from="1481216331901" duration="439000" />
+      <workItem from="1481216331901" duration="748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12100000" />
+    <option name="totallyTimeSpent" value="12409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="663" y="23" width="611" height="730" extended-state="0" />
